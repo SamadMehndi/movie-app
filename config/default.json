@@ -1,0 +1,6 @@
+{
+    "jwtPrivateKey": "movie_jwtPrivateKey",
+    "paths": {
+        "dbPath": "mongodb+srv://samadmehndi:test@cluster0.cgn27.mongodb.net/dbmovie?retryWrites=true&w=majority"
+    }
+}
