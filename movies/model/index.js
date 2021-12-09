@@ -2,4 +2,4 @@
 const Movie = require('./movie');
 
 // exporting Movie
-module.exports = { Movie }
+module.exports = { Movie };

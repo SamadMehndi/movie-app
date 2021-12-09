@@ -1,12 +1,15 @@
-//importing library
+/* eslint-disable no-unused-vars */
+// importing library
 const express = require('express');
+
 const app = express();
+const cors = require('cors');
 const dbMongo = require('./db/mongoose');
-const db = require('./db')
+const db = require('./db');
 const { router } = require('./routes');
-const cors = require("cors");
+
 const corsOptions = {
-  exposedHeaders: "Authorization",
+  exposedHeaders: 'Authorization',
 };
 
 app.use(cors(corsOptions));
@@ -22,21 +25,21 @@ const port = 3000 || process.env.port;
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', "*"),
-      res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'),
-      res.header('Access-Control-Allow-Headers', 'Content-Type')
-    next();
-  })
-
-// home route
-app.get("/", (req,res)=>{
-    res.send("Server running successfully")
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'),
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'),
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
 });
 
-app.use("/", router)
+// home route
+app.get('/', (req, res) => {
+  res.send('Server running successfully');
+});
+
+app.use('/', router);
 
 // defining port
-app.listen(port, ()=>{
-    console.log(`The application started successfuly on port ${port}`)
+app.listen(port, () => {
+  console.log(`The application started successfuly on port ${port}`);
 });

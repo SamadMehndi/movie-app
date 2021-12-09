@@ -1,6 +1,5 @@
 // importing models
 const { movie } = require('../movies/model/index');
 
-
-//exporting models
+// exporting models
 module.exports = { movie };

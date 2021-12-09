@@ -1,10 +1,8 @@
 // defining user roles
 const Roles = {
-    1: 'admin'
+  1: 'admin',
 };
 
-const getRole = (index) => {
-    return Roles[0][index];
-};
+const getRole = (index) => Roles[0][index];
 
-module.exports = { getRole }
+module.exports = { getRole };

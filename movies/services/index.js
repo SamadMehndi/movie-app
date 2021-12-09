@@ -1,5 +1,5 @@
 // importing MovieService
 const MovieService = require('./movieService');
 
-//exporting MovieService
+// exporting MovieService
 module.exports = MovieService;

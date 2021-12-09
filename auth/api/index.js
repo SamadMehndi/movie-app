@@ -5,5 +5,12 @@ const { updateUsers, updatePassword } = require('./put');
 const { deleteUsers } = require('./delete');
 
 // exporting the functions
-module.exports = { getAllUsers , registerUser, loginAuthUser, updateUsers, updatePassword, deleteUsers,
-    getSpecificUser };
+module.exports = {
+  getAllUsers,
+  registerUser,
+  loginAuthUser,
+  updateUsers,
+  updatePassword,
+  deleteUsers,
+  getSpecificUser,
+};
