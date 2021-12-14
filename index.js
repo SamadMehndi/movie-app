@@ -9,7 +9,7 @@ const db = require('./db');
 const { router } = require('./routes');
 
 const corsOptions = {
-  exposedHeaders: 'Authorization',
+    exposedHeaders: 'Authorization',
 };
 
 app.use(cors(corsOptions));
@@ -26,20 +26,20 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'),
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE'),
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
 });
 
 // home route
 app.get('/', (req, res) => {
-  res.send('Server running successfully');
+    res.send('Server running successfully');
 });
 
 app.use('/', router);
 
 // defining port
 app.listen(port, () => {
-  console.log(`The application started successfuly on port ${port}`);
+    console.log(`The application started successfuly on port ${port}`);
 });

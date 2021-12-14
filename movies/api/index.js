@@ -6,5 +6,5 @@ const { deleteMovies } = require('./delete');
 
 // exporting all functions
 module.exports = {
-  createMovies, getAllMovies, getSpecificMovie, updateMovies, deleteMovies,
+    createMovies, getAllMovies, getSpecificMovie, updateMovies, deleteMovies,
 };

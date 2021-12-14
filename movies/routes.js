@@ -3,7 +3,7 @@ const { Router } = require('express');
 
 const movieRouter = Router();
 const {
-  createMovies, updateMovies, getAllMovies, getSpecificMovie, deleteMovies,
+    createMovies, updateMovies, getAllMovies, getSpecificMovie, deleteMovies,
 } = require('./api/index');
 const { verifyAdmin, verifyAdminUser } = require('../middlewares/userAuth');
 

@@ -6,11 +6,11 @@ const { deleteUsers } = require('./delete');
 
 // exporting the functions
 module.exports = {
-  getAllUsers,
-  registerUser,
-  loginAuthUser,
-  updateUsers,
-  updatePassword,
-  deleteUsers,
-  getSpecificUser,
+    getAllUsers,
+    registerUser,
+    loginAuthUser,
+    updateUsers,
+    updatePassword,
+    deleteUsers,
+    getSpecificUser,
 };
